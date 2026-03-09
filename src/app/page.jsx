@@ -16,27 +16,15 @@ const LOGO = {
 
 const CV_URL = "https://drive.google.com/file/d/1_O8T6IsFtBPIuFccF9-YluHy5Yd4ro8-/view?usp=sharing";
 
-const TechBadge = ({ name, icon }) => (
-  <span style={{
-    display: "inline-flex", alignItems: "center", gap: "0.4rem",
-    background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)",
-    padding: "0.3rem 0.7rem", borderRadius: 2,
-  }}>
-    {LOGO[icon] && <img src={LOGO[icon]} alt={name} style={{ width: 14, height: 14, objectFit: "contain" }} />}
-    <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.1em", color: "#94a3b8", textTransform: "uppercase" }}>{name}</span>
-  </span>
-);
-
-/* ═══ DATA ═══ */
 const PROJECTS = [
-  { id: "01", tag: "PHP · SQL Server", title: "Monitoring Subkon Bea Cukai", company: "Bea dan Cukai Purwakarta", desc: "Program pemantauan subkon internal dari bagian PDAD. Menampilkan data masuk dan keluar untuk seluruh perusahaan ekspor-impor di Purwakarta. Dibangun sebagai Full-Stack Developer.", tech: [{ name: "PHP", icon: "php" }, { name: "SQL Server", icon: "sqlserver" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/beacukai/screen1.png", "/screenshoots/beacukai/screen2.png", "/screenshoots/beacukai/screen3.png"], color: "#0ea5e9" },
-  { id: "02", tag: "ASP.NET · SQL Server", title: "Dashboard Hose, RVI & Molded", company: "PT. Velasto Indonesia", desc: "Dashboard pemantauan produksi harian untuk departemen digitalisasi. Mengintegrasikan data dari SQL, Excel, dan IoT ke dalam panel Grafana maupun ASP.NET menggunakan C#.", tech: [{ name: "ASP.NET", icon: "dotnet" }, { name: "SQL Server", icon: "sqlserver" }, { name: "Grafana", icon: "grafana" }], screenshots: ["/screenshoots/velasto/screen1.png", "/screenshoots/velasto/screen2.png", "/screenshoots/velasto/screen3.png"], color: "#3b82f6" },
-  { id: "03", tag: "PHP · SQL Server", title: "Data Product System / ERP", company: "PT. Uwu Jump Indonesia", desc: "Prototype ERP System milik PT. Uwu Jump Indonesia. Membangun dashboard dengan Laravel dan SQL Server, merancang database untuk CRUD dan laporan, serta mengintegrasikan frontend-backend secara penuh.", tech: [{ name: "PHP", icon: "php" }, { name: "Laravel", icon: "laravel" }, { name: "SQL Server", icon: "sqlserver" }], screenshots: ["/screenshoots/erp/screen1.png", "/screenshoots/erp/screen2.png", "/screenshoots/erp/screen3.png"], color: "#2563eb" },
-  { id: "04", tag: "PHP · MySQL", title: "People & Organizational Dev", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi penilaian akhir tahun karyawan. Mengelola proses penilaian, rekapitulasi hasil, dan laporan kinerja seluruh departemen menggunakan PHP dan MySQL.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/pod/screen1.png", "/screenshoots/pod/screen2.png", "/screenshoots/pod/screen3.png"], color: "#1d4ed8" },
-  { id: "05", tag: "PHP · MySQL", title: "Inspection Report QA", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi inspeksi dan pengecekan barang untuk Quality Assurance. Tim QA mencatat hasil inspeksi, upload bukti foto, dan generate laporan inspeksi secara digital.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/inspection/screen1.png", "/screenshoots/inspection/screen2.png", "/screenshoots/inspection/screen3.png"], color: "#0369a1" },
-  { id: "06", tag: "Flutter · PHP · MySQL", title: "Smart Ride", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi Android pemesanan kendaraan operasional. Frontend Flutter, backend REST API PHP, database MySQL. Fitur: booking, approval manager, dan tracking status kendaraan real-time.", tech: [{ name: "Flutter", icon: "flutter" }, { name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/smartride/screen1.png", "/screenshoots/smartride/screen2.png", "/screenshoots/smartride/screen3.png"], color: "#0284c7", isMobile: true },
-  { id: "07", tag: "PHP · MySQL", title: "Psikotest Online Papikostik", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi psikotest online berbasis Papikostik untuk rekrutmen. Sistem otomatis menghitung dan menampilkan hasil analisis kepribadian setelah peserta menyelesaikan tes.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/psikotest/screen1.png", "/screenshoots/psikotest/screen2.png", "/screenshoots/psikotest/screen3.png", "/screenshoots/psikotest/screen4.png", "/screenshoots/psikotest/screen5.png"], color: "#0c4a6e" },
-  { id: "08", tag: "PHP · MySQL · SMTP", title: "Blast Email THR", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi blast email pengiriman THR ke seluruh karyawan. Konfigurasi SMTP, template dinamis, tracking status kirim, dan laporan pengiriman massal menggunakan PHPMailer.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/blast-email/screen1.png", "/screenshoots/blast-email/screen2.png", "/screenshoots/blast-email/screen3.png"], color: "#1e40af" },
+  { id: "01", tag: "PHP · SQL Server", title: "Monitoring Subkon Bea Cukai", company: "Bea dan Cukai Purwakarta", desc: "Program pemantauan subkon internal dari bagian PDAD. Menampilkan data masuk dan keluar untuk seluruh perusahaan ekspor-impor di Purwakarta. Dibangun sebagai Full-Stack Developer.", tech: [{ name: "PHP", icon: "php" }, { name: "SQL Server", icon: "sqlserver" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/beacukai/screen1.png", "/screenshoots/beacukai/screen2.png", "/screenshoots/beacukai/screen3.png"], color: "#14b8a6" },
+  { id: "02", tag: "ASP.NET · SQL Server", title: "Dashboard Hose, RVI & Molded", company: "PT. Velasto Indonesia", desc: "Dashboard pemantauan produksi harian untuk departemen digitalisasi. Mengintegrasikan data dari SQL, Excel, dan IoT ke dalam panel Grafana maupun ASP.NET menggunakan C#.", tech: [{ name: "ASP.NET", icon: "dotnet" }, { name: "SQL Server", icon: "sqlserver" }, { name: "Grafana", icon: "grafana" }], screenshots: ["/screenshoots/velasto/screen1.png", "/screenshoots/velasto/screen2.png", "/screenshoots/velasto/screen3.png"], color: "#06b6d4" },
+  { id: "03", tag: "PHP · SQL Server", title: "Data Product System / ERP", company: "PT. Uwu Jump Indonesia", desc: "Prototype ERP System milik PT. Uwu Jump Indonesia. Membangun dashboard dengan Laravel dan SQL Server, merancang database untuk CRUD dan laporan, serta mengintegrasikan frontend-backend secara penuh.", tech: [{ name: "PHP", icon: "php" }, { name: "Laravel", icon: "laravel" }, { name: "SQL Server", icon: "sqlserver" }], screenshots: ["/screenshoots/erp/screen1.png", "/screenshoots/erp/screen2.png", "/screenshoots/erp/screen3.png"], color: "#0ea5e9" },
+  { id: "04", tag: "PHP · MySQL", title: "People & Organizational Dev", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi penilaian akhir tahun karyawan. Mengelola proses penilaian, rekapitulasi hasil, dan laporan kinerja seluruh departemen menggunakan PHP dan MySQL.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/pod/screen1.png", "/screenshoots/pod/screen2.png", "/screenshoots/pod/screen3.png"], color: "#f97316" },
+  { id: "05", tag: "PHP · MySQL", title: "Inspection Report QA", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi inspeksi dan pengecekan barang untuk Quality Assurance. Tim QA mencatat hasil inspeksi, upload bukti foto, dan generate laporan inspeksi secara digital.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/inspection/screen1.png", "/screenshoots/inspection/screen2.png", "/screenshoots/inspection/screen3.png"], color: "#ec4899" },
+  { id: "06", tag: "Flutter · PHP · MySQL", title: "Smart Ride", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi Android pemesanan kendaraan operasional. Frontend Flutter, backend REST API PHP, database MySQL. Fitur: booking, approval manager, dan tracking status kendaraan real-time.", tech: [{ name: "Flutter", icon: "flutter" }, { name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/smartride/screen1.png", "/screenshoots/smartride/screen2.png", "/screenshoots/smartride/screen3.png"], color: "#8b5cf6", isMobile: true },
+  { id: "07", tag: "PHP · MySQL", title: "Psikotest Online Papikostik", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi psikotest online berbasis Papikostik untuk rekrutmen. Sistem otomatis menghitung dan menampilkan hasil analisis kepribadian setelah peserta menyelesaikan tes.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }, { name: "Laravel", icon: "laravel" }], screenshots: ["/screenshoots/psikotest/screen1.png", "/screenshoots/psikotest/screen2.png", "/screenshoots/psikotest/screen3.png", "/screenshoots/psikotest/screen4.png", "/screenshoots/psikotest/screen5.png"], color: "#a855f7" },
+  { id: "08", tag: "PHP · MySQL · SMTP", title: "Blast Email THR", company: "PT. Uwu Jump Indonesia", desc: "Aplikasi blast email pengiriman THR ke seluruh karyawan. Konfigurasi SMTP, template dinamis, tracking status kirim, dan laporan pengiriman massal menggunakan PHPMailer.", tech: [{ name: "PHP", icon: "php" }, { name: "MySQL", icon: "mysql" }], screenshots: ["/screenshoots/blast-email/screen1.png", "/screenshoots/blast-email/screen2.png", "/screenshoots/blast-email/screen3.png"], color: "#f43f5e" },
 ];
 
 const CERTIFICATES = [
@@ -68,11 +56,77 @@ const SKILLS_TECH = [
   { name: "Figma", icon: "figma", level: 75 }, { name: "Grafana", icon: "grafana", level: 70 },
 ];
 
-/* ═══ LIGHTBOX ═══ */
+function AnimatedBackground() {
+  const canvasRef = useRef(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const particles = Array.from({ length: 50 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+    }));
+    const animate = () => {
+      ctx.fillStyle = 'rgba(3, 7, 18, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.y > canvas.height) p.y = 0;
+        if (p.y < 0) p.y = canvas.height;
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.6)';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    };
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    window.addEventListener('resize', handleResize);
+    animate();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return <canvas ref={canvasRef} style={{ position: 'fixed', inset: 0, zIndex: 1, pointerEvents: 'none', opacity: 0.15 }} />;
+}
+
+function TechBadge({ name, icon }) {
+  return (
+    <span style={{
+      display: "inline-flex", alignItems: "center", gap: "0.4rem",
+      background: "rgba(6,182,212,0.1)", border: "1px solid rgba(6,182,212,0.3)",
+      padding: "0.35rem 0.8rem", borderRadius: 6,
+      backdropFilter: "blur(10px)",
+      transition: "all .3s ease",
+    }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = "rgba(6,182,212,0.2)";
+        e.currentTarget.style.borderColor = "rgba(6,182,212,0.6)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = "rgba(6,182,212,0.1)";
+        e.currentTarget.style.borderColor = "rgba(6,182,212,0.3)";
+      }}
+    >
+      {LOGO[icon] && <img src={LOGO[icon]} alt={name} style={{ width: 14, height: 14, objectFit: "contain" }} />}
+      <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.1em", color: "#06b6d4", textTransform: "uppercase" }}>{name}</span>
+    </span>
+  );
+}
+
 function Lightbox({ project, initialIndex, onClose }) {
   const [current, setCurrent] = useState(initialIndex || 0);
   const [imgError, setImgError] = useState({});
-  const [zoom, setZoom] = useState(false);
   const touchStart = useRef(null);
 
   const prev = useCallback(() => setCurrent(c => (c - 1 + project.screenshots.length) % project.screenshots.length), [project]);
@@ -97,20 +151,22 @@ function Lightbox({ project, initialIndex, onClose }) {
   };
 
   return (
-    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.97)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", animation: "fadeIn .2s ease" }}>
-      {/* Header */}
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.97)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", animation: "fadeIn .2s ease", backdropFilter: "blur(8px)" }}>
       <div onClick={e => e.stopPropagation()} style={{ position: "absolute", top: 0, left: 0, right: 0, padding: "1rem 1.25rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "linear-gradient(to bottom,rgba(0,0,0,0.85),transparent)" }}>
         <div>
           <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.25em", color: project.color, textTransform: "uppercase", marginBottom: "0.2rem" }}>{project.id} — {project.tag}</p>
-          <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.85rem,3vw,1.1rem)", color: "#e2e8f0" }}>{project.title}</h3>
+          <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.85rem,3vw,1.1rem)", color: "#f1f5f9" }}>{project.title}</h3>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", color: "#475569" }}>{current + 1}/{project.screenshots.length}</span>
-          <button onClick={onClose} style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", color: "#e2e8f0", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", display: "flex", alignItems: "center", justifyContent: "center" }}>×</button>
-        </div>
+        <button onClick={onClose} style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#f1f5f9", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .2s" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.15)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+          }}
+        >×</button>
       </div>
 
-      {/* Image area — swipeable */}
       <div
         onClick={e => e.stopPropagation()}
         onTouchStart={onTouchStart}
@@ -118,7 +174,7 @@ function Lightbox({ project, initialIndex, onClose }) {
         style={{ position: "relative", width: "92vw", maxWidth: project.isMobile ? "340px" : "85vw", display: "flex", alignItems: "center", justifyContent: "center" }}
       >
         {imgError[current] ? (
-          <div style={{ width: "100%", height: "50vw", maxHeight: 440, background: `linear-gradient(135deg,#0a1628,${project.color}18)`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1rem", border: `1px solid ${project.color}20` }}>
+          <div style={{ width: "100%", height: "50vw", maxHeight: 440, background: `linear-gradient(135deg,#0a1628,${project.color}18)`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1rem", border: `1px solid ${project.color}20`, borderRadius: 12 }}>
             <span style={{ fontFamily: "'Playfair Display',serif", fontSize: "4rem", color: `${project.color}20` }}>{project.id}</span>
           </div>
         ) : (
@@ -126,8 +182,7 @@ function Lightbox({ project, initialIndex, onClose }) {
             key={current}
             src={project.screenshots[current]}
             alt={`${project.title} ${current + 1}`}
-            onClick={() => setZoom(z => !z)}
-            style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain", borderRadius: 2, border: "1px solid rgba(255,255,255,0.06)", cursor: zoom ? "zoom-out" : "zoom-in", transform: zoom ? "scale(1.5)" : "scale(1)", transition: "transform .3s ease", animation: "slideUp .2s ease" }}
+            style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain", borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)", animation: "slideUp .2s ease" }}
             onError={() => setImgError(prev => ({ ...prev, [current]: true }))}
           />
         )}
@@ -140,22 +195,19 @@ function Lightbox({ project, initialIndex, onClose }) {
         )}
       </div>
 
-      {/* Thumbnails */}
       {project.screenshots.length > 1 && (
-        <div onClick={e => e.stopPropagation()} style={{ display: "flex", gap: "0.4rem", marginTop: "1.25rem", padding: "0.6rem", background: "rgba(255,255,255,0.03)", borderRadius: 4, flexWrap: "wrap", justifyContent: "center" }}>
+        <div onClick={e => e.stopPropagation()} style={{ display: "flex", gap: "0.4rem", marginTop: "1.25rem", padding: "0.6rem", background: "rgba(255,255,255,0.05)", borderRadius: 8, flexWrap: "wrap", justifyContent: "center", backdropFilter: "blur(10px)" }}>
           {project.screenshots.map((src, i) => (
-            <button key={i} onClick={() => setCurrent(i)} style={{ width: 52, height: 34, padding: 0, border: `2px solid ${i === current ? project.color : "rgba(255,255,255,0.1)"}`, borderRadius: 2, overflow: "hidden", cursor: "pointer", background: "#0a1628", opacity: i === current ? 1 : 0.5, transition: "all .2s" }}>
+            <button key={i} onClick={() => setCurrent(i)} style={{ width: 52, height: 34, padding: 0, border: `2px solid ${i === current ? project.color : "rgba(255,255,255,0.1)"}`, borderRadius: 6, overflow: "hidden", cursor: "pointer", background: "#0a1628", opacity: i === current ? 1 : 0.5, transition: "all .2s" }}>
               {!imgError[i] && <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} onError={() => setImgError(prev => ({ ...prev, [i]: true }))} />}
             </button>
           ))}
         </div>
       )}
-      <p style={{ marginTop: "0.75rem", fontFamily: "'Space Mono',monospace", fontSize: "0.45rem", letterSpacing: "0.25em", color: "#1e293b", textTransform: "uppercase" }}>swipe or use ← → · ESC to close</p>
     </div>
   );
 }
 
-/* ═══ CERT MODAL ═══ */
 function CertModal({ cert, onClose }) {
   const [current, setCurrent] = useState(0);
   const touchStart = useRef(null);
@@ -182,14 +234,21 @@ function CertModal({ cert, onClose }) {
   };
 
   return (
-    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.97)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", animation: "fadeIn .2s ease" }}>
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.97)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", animation: "fadeIn .2s ease", backdropFilter: "blur(8px)" }}>
       <div onClick={e => e.stopPropagation()} style={{ position: "absolute", top: 0, left: 0, right: 0, padding: "1rem 1.25rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "linear-gradient(to bottom,rgba(0,0,0,0.85),transparent)" }}>
         <div>
-          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.45rem", letterSpacing: "0.2em", color: "#3b82f6", textTransform: "uppercase", background: "rgba(59,130,246,0.1)", padding: "0.15rem 0.5rem", border: "1px solid rgba(59,130,246,0.2)" }}>{cert.category}</span>
-          <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.8rem,3vw,1rem)", color: "#e2e8f0", marginTop: "0.4rem" }}>{cert.name}</h3>
-          <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", color: "#475569", marginTop: "0.15rem" }}>{cert.issuer} · {cert.year}</p>
+          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.45rem", letterSpacing: "0.2em", color: "#06b6d4", textTransform: "uppercase", background: "rgba(6,182,212,0.15)", padding: "0.2rem 0.6rem", border: "1px solid rgba(6,182,212,0.3)", borderRadius: 4 }}>{cert.category}</span>
+          <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.8rem,3vw,1rem)", color: "#f1f5f9", marginTop: "0.4rem" }}>{cert.name}</h3>
+          <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", color: "#64748b", marginTop: "0.15rem" }}>{cert.issuer} · {cert.year}</p>
         </div>
-        <button onClick={onClose} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", color: "#e2e8f0", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
+        <button onClick={onClose} style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#f1f5f9", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "all .2s" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.15)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+          }}
+        >×</button>
       </div>
 
       <div onClick={e => e.stopPropagation()} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{ position: "relative", width: "92vw", maxWidth: "80vw", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -197,7 +256,7 @@ function CertModal({ cert, onClose }) {
           key={current}
           src={cert.images[current]}
           alt={cert.name}
-          style={{ maxWidth: "100%", maxHeight: "68vh", objectFit: "contain", borderRadius: 2, border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 30px 80px rgba(0,0,0,0.8)", animation: "slideUp .2s ease" }}
+          style={{ maxWidth: "100%", maxHeight: "68vh", objectFit: "contain", borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 30px 80px rgba(0,0,0,0.8)", animation: "slideUp .2s ease" }}
           onError={e => { e.target.style.display = "none"; }}
         />
         {cert.images.length > 1 && (
@@ -211,7 +270,7 @@ function CertModal({ cert, onClose }) {
       {cert.images.length > 1 && (
         <div onClick={e => e.stopPropagation()} style={{ display: "flex", gap: "0.4rem", marginTop: "1.25rem" }}>
           {cert.images.map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} style={{ width: i === current ? 22 : 7, height: 7, borderRadius: 4, border: "none", background: i === current ? "#3b82f6" : "rgba(255,255,255,0.2)", cursor: "pointer", transition: "all .2s", padding: 0 }} />
+            <button key={i} onClick={() => setCurrent(i)} style={{ width: i === current ? 22 : 7, height: 7, borderRadius: 4, border: "none", background: i === current ? "#06b6d4" : "rgba(255,255,255,0.2)", cursor: "pointer", transition: "all .2s", padding: 0 }} />
           ))}
         </div>
       )}
@@ -219,7 +278,51 @@ function CertModal({ cert, onClose }) {
   );
 }
 
-/* ═══ CURSOR — desktop only ═══ */
+function MagneticButton({ children, href, onClick, style, ...props }) {
+  const buttonRef = useRef(null);
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    if (!buttonRef.current) return;
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    const distance = Math.sqrt(x * x + y * y);
+    if (distance < 100) {
+      setPos({
+        x: (x / distance) * 30,
+        y: (y / distance) * 30,
+      });
+    } else {
+      setPos({ x: 0, y: 0 });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setPos({ x: 0, y: 0 });
+  };
+
+  const Tag = href ? 'a' : 'button';
+  const props2 = href ? { href } : { onClick };
+
+  return (
+    <Tag
+      ref={buttonRef}
+      {...props2}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transform: `translate(${pos.x}px, ${pos.y}px)`,
+        transition: "transform 0.15s ease-out",
+        ...style,
+      }}
+      {...props}
+    >
+      {children}
+    </Tag>
+  );
+}
+
 function Cursor() {
   const dot = useRef(null);
   const ring = useRef(null);
@@ -233,13 +336,12 @@ function Cursor() {
   }, []);
   return (
     <>
-      <div ref={dot} className="cursor-dot" style={{ position: "fixed", width: 8, height: 8, background: "#3b82f6", borderRadius: "50%", pointerEvents: "none", zIndex: 10000, transform: "translate(-50%,-50%)" }} />
-      <div ref={ring} className="cursor-ring" style={{ position: "fixed", width: 30, height: 30, border: "1px solid rgba(59,130,246,0.5)", borderRadius: "50%", pointerEvents: "none", zIndex: 9999, transform: "translate(-50%,-50%)", transition: "all .15s" }} />
+      <div ref={dot} className="cursor-dot" style={{ position: "fixed", width: 8, height: 8, background: "#06b6d4", borderRadius: "50%", pointerEvents: "none", zIndex: 10000, transform: "translate(-50%,-50%)", boxShadow: "0 0 16px rgba(6,182,212,0.6)" }} />
+      <div ref={ring} className="cursor-ring" style={{ position: "fixed", width: 30, height: 30, border: "1.5px solid rgba(6,182,212,0.5)", borderRadius: "50%", pointerEvents: "none", zIndex: 9999, transform: "translate(-50%,-50%)", transition: "all .15s" }} />
     </>
   );
 }
 
-/* ═══ SPLASH ═══ */
 function Splash({ onDone }) {
   const [exit, setExit] = useState(false);
   useEffect(() => {
@@ -248,20 +350,19 @@ function Splash({ onDone }) {
   }, [onDone]);
   return (
     <div style={{ position: "fixed", inset: 0, background: "#030712", zIndex: 1000, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "2rem", opacity: exit ? 0 : 1, transition: "opacity .7s ease", pointerEvents: exit ? "none" : "all" }}>
-      <div style={{ width: 1, height: 0, background: "linear-gradient(to bottom,#3b82f6,#60a5fa)", animation: "growV 1s ease forwards" }} />
+      <div style={{ width: 1, height: 0, background: "linear-gradient(to bottom,#06b6d4,#14b8a6)", animation: "growV 1s ease forwards" }} />
       <div style={{ textAlign: "center", opacity: 0, animation: "splashUp .9s ease .9s forwards" }}>
         <p style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(1.5rem,5vw,4rem)", fontWeight: 300, letterSpacing: "0.12em", color: "#f0f9ff", lineHeight: 1.15 }}>Welcome to My</p>
-        <p style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(1.5rem,5vw,4rem)", fontWeight: 500, fontStyle: "italic", letterSpacing: "0.08em", color: "#60a5fa", lineHeight: 1.15 }}>Portfolio Website</p>
+        <p style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(1.5rem,5vw,4rem)", fontWeight: 500, fontStyle: "italic", letterSpacing: "0.08em", background: "linear-gradient(135deg, #06b6d4, #14b8a6, #f97316)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1.15 }}>Portfolio Website</p>
       </div>
-      <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", color: "#38bdf8", textTransform: "uppercase", opacity: 0, animation: "splashUp .8s ease 1.4s forwards" }}>Adha Raka Firmansyah</p>
+      <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", color: "#06b6d4", textTransform: "uppercase", opacity: 0, animation: "splashUp .8s ease 1.4s forwards" }}>Adha Raka Firmansyah</p>
       <div style={{ width: 200, height: 1, background: "rgba(255,255,255,0.1)", overflow: "hidden", opacity: 0, animation: "splashUp .5s ease 1.8s forwards" }}>
-        <div style={{ height: "100%", background: "linear-gradient(90deg,#3b82f6,#60a5fa)", width: "0%", animation: "barFill 1.4s ease 2s forwards" }} />
+        <div style={{ height: "100%", background: "linear-gradient(90deg,#06b6d4,#14b8a6,#f97316)", width: "0%", animation: "barFill 1.4s ease 2s forwards" }} />
       </div>
     </div>
   );
 }
 
-/* ═══ PROJECT CARD ═══ */
 function ProjectCard({ p, onOpenLightbox }) {
   const [slide, setSlide] = useState(0);
   const [errors, setErrors] = useState({});
@@ -281,7 +382,18 @@ function ProjectCard({ p, onOpenLightbox }) {
 
   return (
     <div
-      style={{ background: "#0f172a", border: `1px solid ${hovered ? "rgba(59,130,246,0.35)" : "rgba(59,130,246,0.12)"}`, overflow: "hidden", transition: "transform .3s,border-color .3s,box-shadow .3s", transform: hovered ? "translateY(-4px)" : "translateY(0)", boxShadow: hovered ? `0 20px 60px rgba(0,0,0,0.5),0 0 0 1px ${p.color}15` : "none", display: "flex", flexDirection: "column" }}
+      style={{
+        background: "rgba(15,23,42,0.5)",
+        backdropFilter: "blur(16px)",
+        border: `1px solid ${hovered ? "rgba(6,182,212,0.4)" : "rgba(6,182,212,0.15)"}`,
+        overflow: "hidden",
+        transition: "all .4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        transform: hovered ? "translateY(-8px)" : "translateY(0)",
+        boxShadow: hovered ? `0 30px 60px rgba(6,182,212,0.1), inset 0 1px 1px rgba(255,255,255,0.1)` : "none",
+        display: "flex",
+        flexDirection: "column",
+        borderRadius: 16,
+      }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -299,99 +411,95 @@ function ProjectCard({ p, onOpenLightbox }) {
             key={`${p.id}-${slide}`}
             src={p.screenshots[slide]}
             alt={`${p.title} ${slide + 1}`}
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s", transform: hovered ? "scale(1.03)" : "scale(1)" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s", transform: hovered ? "scale(1.05)" : "scale(1)" }}
             onError={() => setErrors(prev => ({ ...prev, [slide]: true }))}
           />
         )}
 
-        {/* Hover overlay — only on non-touch */}
-        <div style={{ position: "absolute", inset: 0, background: "rgba(3,7,18,0.55)", opacity: hovered ? 1 : 0, transition: "opacity .3s", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 3 }}>
-          <button
+        <div style={{ position: "absolute", inset: 0, background: "rgba(3,7,18,0.55)", opacity: hovered ? 1 : 0, transition: "opacity .3s", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 3, borderRadius: 0 }}>
+          <MagneticButton
             onClick={() => onOpenLightbox(p, slide)}
-            style={{ background: "rgba(59,130,246,0.9)", border: "none", color: "#fff", padding: "0.6rem 1.4rem", fontFamily: "'Space Mono',monospace", fontSize: "0.58rem", letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", display: "flex", alignItems: "center", gap: "0.4rem", boxShadow: "0 8px 24px rgba(59,130,246,0.4)" }}
-          >⊞ View Screenshots</button>
+            style={{
+              background: "linear-gradient(135deg, #06b6d4, #14b8a6)",
+              border: "none",
+              color: "#fff",
+              padding: "0.7rem 1.6rem",
+              fontFamily: "'Space Mono',monospace",
+              fontSize: "0.58rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              boxShadow: "0 12px 32px rgba(6,182,212,0.3)",
+              borderRadius: 8,
+            }}
+          >⊞ View Screenshots</MagneticButton>
         </div>
 
-        {/* Mobile tap-to-view button */}
-        <button
-          onClick={() => onOpenLightbox(p, slide)}
-          className="mobile-view-btn"
-          style={{ display: "none" }}
-        >⊞ View</button>
-
-        <div style={{ position: "absolute", bottom: "0.6rem", left: 0, right: 0, display: "flex", justifyContent: "center", gap: "0.35rem", zIndex: 2 }}>
+        <div style={{ position: "absolute", bottom: "0.8rem", left: 0, right: 0, display: "flex", justifyContent: "center", gap: "0.4rem", zIndex: 2 }}>
           {p.screenshots.map((_, i) => (
-            <button key={i} onClick={() => setSlide(i)} style={{ width: slide === i ? 18 : 5, height: 5, borderRadius: 3, border: "none", background: slide === i ? p.color : "rgba(255,255,255,0.25)", padding: 0, cursor: "pointer", transition: "all .2s" }} />
+            <button key={i} onClick={() => setSlide(i)} style={{ width: slide === i ? 20 : 6, height: 6, borderRadius: 3, border: "none", background: slide === i ? p.color : "rgba(255,255,255,0.2)", padding: 0, cursor: "pointer", transition: "all .3s ease" }} />
           ))}
         </div>
 
         {slide > 0 && <button onClick={() => setSlide(s => s - 1)} style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.6)", border: "none", color: "#fff", width: 28, height: 28, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>‹</button>}
         {slide < p.screenshots.length - 1 && <button onClick={() => setSlide(s => s + 1)} style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.6)", border: "none", color: "#fff", width: 28, height: 28, borderRadius: "50%", cursor: "pointer", fontSize: "1.1rem", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>›</button>}
 
-        <div style={{ position: "absolute", top: "0.6rem", left: "0.6rem", background: "rgba(0,0,0,0.65)", padding: "0.15rem 0.5rem", fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", color: p.color, letterSpacing: "0.2em", zIndex: 2 }}>{p.id}</div>
+        <div style={{ position: "absolute", top: "0.8rem", left: "0.8rem", background: "rgba(0,0,0,0.7)", backdropFilter: "blur(8px)", padding: "0.2rem 0.6rem", fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", color: p.color, letterSpacing: "0.2em", zIndex: 2, borderRadius: 4 }}>{p.id}</div>
       </div>
 
-      <div style={{ padding: "1.25rem", flex: 1, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      <div style={{ padding: "1.5rem", flex: 1, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
         <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.3em", textTransform: "uppercase", color: p.color }}>{p.tag}</p>
-        <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(1rem,2.5vw,1.25rem)", fontWeight: 500, color: "#e2e8f0", lineHeight: 1.2 }}>{p.title}</h3>
-        <p style={{ fontSize: "0.68rem", color: "#475569", fontFamily: "'Space Mono',monospace", letterSpacing: "0.05em" }}>— {p.company}</p>
-        <p style={{ fontSize: "0.82rem", color: "#94a3b8", lineHeight: 1.75, flex: 1 }}>{p.desc}</p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.4rem", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>{p.tech.map(t => <TechBadge key={t.name} name={t.name} icon={t.icon} />)}</div>
-          <button
-            onClick={() => onOpenLightbox(p, 0)}
-            style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.1em", textTransform: "uppercase", color: p.color, background: "transparent", border: `1px solid ${p.color}40`, padding: "0.3rem 0.6rem", cursor: "pointer", transition: "all .2s", flexShrink: 0 }}
-            onMouseEnter={e => { e.currentTarget.style.background = `${p.color}15`; e.currentTarget.style.borderColor = p.color; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = `${p.color}40`; }}
-          >{p.screenshots.length} foto →</button>
+        <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(1rem,2.5vw,1.3rem)", fontWeight: 500, color: "#f1f5f9", lineHeight: 1.2 }}>{p.title}</h3>
+        <p style={{ fontSize: "0.7rem", color: "#64748b", fontFamily: "'Space Mono',monospace", letterSpacing: "0.05em" }}>— {p.company}</p>
+        <p style={{ fontSize: "0.85rem", color: "#94a3b8", lineHeight: 1.75, flex: 1 }}>{p.desc}</p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.6rem" }}>
+          {p.tech.map(t => <TechBadge key={t.name} name={t.name} icon={t.icon} />)}
         </div>
       </div>
     </div>
   );
 }
 
-/* ═══ SECTION HEAD ═══ */
 function SectionHead({ label, title, italic }) {
   return (
-    <div className="rv" style={{ marginBottom: "3rem" }}>
-      <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", color: "#3b82f6", textTransform: "uppercase", marginBottom: "0.75rem", display: "flex", alignItems: "center", gap: "1rem" }}>
-        <span style={{ width: 40, height: 1, background: "#3b82f6", display: "inline-block" }} />{label}
+    <div className="rv" style={{ marginBottom: "3.5rem" }}>
+      <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textTransform: "uppercase", marginBottom: "0.875rem", display: "flex", alignItems: "center", gap: "1rem" }}>
+        <span style={{ width: 40, height: 1, background: "linear-gradient(90deg, #06b6d4, #14b8a6)", display: "inline-block" }} />{label}
       </p>
       <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2rem,6vw,3.8rem)", fontWeight: 400, lineHeight: 1.1 }}>
-        {title} <em style={{ color: "#60a5fa" }}>{italic}</em>
+        {title} <em style={{ background: "linear-gradient(135deg, #06b6d4, #14b8a6, #f97316)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontStyle: "italic" }}>{italic}</em>
       </h2>
     </div>
   );
 }
 
-/* ═══ HAMBURGER MENU ═══ */
 function HamburgerMenu({ active, onClose }) {
   const NAV_ITEMS = ["home", "about", "experience", "project", "sertifikat", "contact"];
   return (
     <>
-      {/* Backdrop */}
       <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", zIndex: 199, backdropFilter: "blur(4px)", animation: "fadeIn .2s ease" }} />
-      {/* Drawer */}
-      <div style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(320px,85vw)", background: "#0a1628", zIndex: 200, borderLeft: "1px solid rgba(59,130,246,0.2)", display: "flex", flexDirection: "column", padding: "5rem 2rem 2rem", animation: "slideInRight .3s ease", gap: "0.25rem" }}>
+      <div style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(320px,85vw)", background: "rgba(10,22,40,0.95)", backdropFilter: "blur(16px)", zIndex: 200, borderLeft: "1px solid rgba(6,182,212,0.2)", display: "flex", flexDirection: "column", padding: "5rem 2rem 2rem", animation: "slideInRight .3s ease", gap: "0.25rem" }}>
         {NAV_ITEMS.map((id, i) => (
           <a
             key={id} href={`#${id}`} onClick={onClose}
-            style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.75rem", letterSpacing: "0.25em", textTransform: "uppercase", color: active === id ? "#60a5fa" : "#64748b", padding: "1rem 0", borderBottom: "1px solid rgba(59,130,246,0.08)", display: "flex", alignItems: "center", gap: "1rem", transition: "color .2s", animationDelay: `${i * 0.05}s` }}
+            style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.75rem", letterSpacing: "0.25em", textTransform: "uppercase", color: active === id ? "#06b6d4" : "#64748b", padding: "1rem 0", borderBottom: "1px solid rgba(6,182,212,0.08)", display: "flex", alignItems: "center", gap: "1rem", transition: "color .2s" }}
           >
-            <span style={{ fontFamily: "'Playfair Display',serif", fontSize: "0.7rem", color: "rgba(59,130,246,0.4)", fontStyle: "italic" }}>0{i + 1}</span>
+            <span style={{ fontFamily: "'Playfair Display',serif", fontSize: "0.7rem", color: "rgba(6,182,212,0.4)", fontStyle: "italic" }}>0{i + 1}</span>
             {id}
           </a>
         ))}
         <a
           href={CV_URL} target="_blank" rel="noopener noreferrer" onClick={onClose}
-          style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "2rem", background: "#3b82f6", color: "#fff", padding: "0.875rem 1.5rem", fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", justifyContent: "center" }}
+          style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "2rem", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", color: "#fff", padding: "0.875rem 1.5rem", fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", justifyContent: "center", borderRadius: 8 }}
         >↓ Download CV</a>
       </div>
     </>
   );
 }
 
-/* ═══ MAIN PAGE ═══ */
 export default function Portfolio() {
   const [ready, setReady] = useState(false);
   const [active, setActive] = useState("home");
@@ -432,27 +540,19 @@ export default function Portfolio() {
 
   const filteredCerts = certFilter === "Semua" ? CERTIFICATES : CERTIFICATES.filter(c => c.category === certFilter);
 
-  const C = {
-    bg: "#030712", bg2: "#0f172a", bg3: "#1e293b",
-    blue: "#3b82f6", blueL: "#60a5fa", blueD: "#1d4ed8",
-    text: "#e2e8f0", muted: "#64748b", faint: "#94a3b8",
-    border: "rgba(59,130,246,0.15)",
-  };
-
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
-        body{background:#030712;color:#e2e8f0;font-family:'DM Sans',sans-serif;overflow-x:hidden}
-        ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#030712}::-webkit-scrollbar-thumb{background:#3b82f6;border-radius:2px}
+        body{background:#030712;color:#f1f5f9;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+        ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#030712}::-webkit-scrollbar-thumb{background:#06b6d4;border-radius:4px}
 
-        /* Cursor — desktop only */
         @media(hover:hover){*{cursor:none}.cursor-dot,.cursor-ring{display:block!important}}
         @media(hover:none){.cursor-dot,.cursor-ring{display:none!important}}
 
-        .rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+        .rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(0.34, 1.56, 0.64, 1),transform .7s cubic-bezier(0.34, 1.56, 0.64, 1)}
         .rv.vis{opacity:1;transform:translateY(0)}
         .d1.rv.vis{transition-delay:.1s}.d2.rv.vis{transition-delay:.2s}.d3.rv.vis{transition-delay:.3s}.d4.rv.vis{transition-delay:.4s}
 
@@ -467,40 +567,35 @@ export default function Portfolio() {
 
         a{text-decoration:none}
 
-        /* Navbar links — hidden on mobile */
         .nav-links{display:flex;gap:2.25rem;list-style:none;align-items:center}
-        .nav-link{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;transition:color .25s;padding-bottom:2px}
-        .nav-link:hover{color:#3b82f6!important}
+        .nav-link{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;transition:all .3s;padding-bottom:2px;position:relative}
+        .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg, #06b6d4, #14b8a6);transition:width .3s}
+        .nav-link:hover::after{width:100%}
 
-        /* Hamburger — hidden on desktop */
         .hamburger{display:none;flex-direction:column;gap:5px;background:transparent;border:none;padding:6px;cursor:pointer}
         .hamburger span{width:22px;height:2px;background:#94a3b8;border-radius:2px;transition:all .25s;display:block}
 
-        .cert-card{transition:transform .25s,border-color .25s,box-shadow .25s}
-        .cert-card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,0.4)!important;box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+        .cert-card{transition:all .3s cubic-bezier(0.34, 1.56, 0.64, 1);position:relative}
+        .cert-card:hover{transform:translateY(-6px)}
 
-        .social-link{display:flex;align-items:center;gap:1.25rem;padding:1rem 1.5rem;background:#030712;border:1px solid rgba(59,130,246,0.15);transition:all .25s}
-        .social-link:hover{border-color:#3b82f6;padding-left:2rem}
+        .social-link{display:flex;align-items:center;gap:1.25rem;padding:1.25rem;background:rgba(15,23,42,0.5);border:1px solid rgba(6,182,212,0.15);backdrop-filter:blur(16px);transition:all .3s;border-radius:12px}
+        .social-link:hover{border-color:#06b6d4;transform:translateX(8px);background:rgba(6,182,212,0.08)}
 
-        input,textarea{background:#0f172a;border:1px solid rgba(59,130,246,0.15);color:#e2e8f0;padding:.875rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .25s;width:100%}
-        input:focus,textarea:focus{border-color:#3b82f6}textarea{resize:none}
+        input,textarea{background:rgba(15,23,42,0.6);border:1px solid rgba(6,182,212,0.2);backdrop-filter:blur(16px);color:#f1f5f9;padding:.875rem 1rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:all .3s;width:100%;border-radius:8px}
+        input:focus,textarea:focus{border-color:#06b6d4;background:rgba(15,23,42,0.8);box-shadow:0 0 20px rgba(6,182,212,0.1)}
 
-        .exp-card{background:#0f172a;border:1px solid rgba(59,130,246,0.15);padding:2rem;transition:border-color .25s}
-        .exp-card:hover{border-color:rgba(59,130,246,0.4)}
+        .exp-card{background:rgba(15,23,42,0.5);border:1px solid rgba(6,182,212,0.15);backdrop-filter:blur(16px);padding:2rem;transition:all .3s;border-radius:12px}
+        .exp-card:hover{border-color:rgba(6,182,212,0.4);background:rgba(6,182,212,0.08)}
 
-        .filter-btn{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid rgba(59,130,246,0.2);background:transparent;color:#64748b;padding:0.4rem 1rem;cursor:pointer;transition:all .2s}
-        .filter-btn:hover{border-color:#3b82f6;color:#3b82f6}
-        .filter-btn.active{background:rgba(59,130,246,0.12);border-color:#3b82f6;color:#60a5fa}
+        .filter-btn{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid rgba(6,182,212,0.2);background:transparent;color:#64748b;padding:0.5rem 1.2rem;cursor:pointer;transition:all .3s;border-radius:8px}
+        .filter-btn:hover{border-color:#06b6d4;color:#06b6d4}
+        .filter-btn.active{background:rgba(6,182,212,0.12);border-color:#06b6d4;color:#06b6d4;box-shadow:0 0 20px rgba(6,182,212,0.1)}
 
-        /* Lightbox nav buttons */
-        .lb-nav{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);transition:background .2s}
-        .lb-nav:hover{background:rgba(59,130,246,0.2)}
+        .lb-nav{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#f1f5f9;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);transition:all .3s;backdrop-filter:blur(10px)}
+        .lb-nav:hover{background:rgba(6,182,212,0.25);border-color:rgba(6,182,212,0.5)}
         .lb-nav-l{left:-58px}
         .lb-nav-r{right:-58px}
 
-        /* ═══════════════════════════════════════════
-           TABLET — max-width: 1024px
-        ═══════════════════════════════════════════ */
         @media(max-width:1024px){
           .projects-grid{grid-template-columns:1fr!important}
           .about-grid{grid-template-columns:1fr!important;gap:3rem!important}
@@ -510,59 +605,42 @@ export default function Portfolio() {
           .contact-grid{grid-template-columns:1fr!important;gap:3rem!important}
         }
 
-        /* ═══════════════════════════════════════════
-           MOBILE — max-width: 768px
-        ═══════════════════════════════════════════ */
         @media(max-width:768px){
-          /* Navbar */
           .nav-links{display:none!important}
           .hamburger{display:flex!important}
           nav{padding:0.875rem 1.25rem!important}
           .nav-cv-btn{display:none!important}
 
-          /* Sections padding */
           section{padding-left:1.25rem!important;padding-right:1.25rem!important;padding-top:5rem!important;padding-bottom:3rem!important}
           footer{padding:1.5rem 1.25rem!important;flex-direction:column!important;text-align:center!important}
 
-          /* Hero */
           .hero-section{padding:0 1.25rem!important;padding-top:0!important}
           .hero-inner{padding-top:5rem!important}
           .hero-btns{flex-direction:column!important;align-items:flex-start!important;gap:0.875rem!important}
           .hero-btns a{width:100%!important;text-align:center!important;justify-content:center!important}
           .scroll-indicator{display:none!important}
 
-          /* About */
           .about-grid{grid-template-columns:1fr!important;gap:2.5rem!important}
           .about-photo{display:none!important}
           .stats-grid{grid-template-columns:repeat(3,1fr)!important}
 
-          /* Experience */
           .edu-grid{grid-template-columns:1fr!important}
           .exp-header{flex-direction:column!important;align-items:flex-start!important}
           .exp-card{padding:1.25rem!important}
 
-          /* Projects */
           .projects-grid{grid-template-columns:1fr!important}
 
-          /* Certificates */
           .cert-grid{grid-template-columns:1fr!important}
 
-          /* Contact */
           .contact-grid{grid-template-columns:1fr!important;gap:2.5rem!important}
 
-          /* Section head font */
           .section-head h2{font-size:clamp(1.8rem,7vw,2.8rem)!important}
 
-          /* Lightbox nav on mobile — hide side buttons, show below */
           .lb-nav{display:none!important}
 
-          /* Show mobile view button on project cards */
-          .mobile-view-btn{display:flex!important;position:absolute;bottom:50px;left:50%;transform:translateX(-50%);background:rgba(59,130,246,0.85);border:none;color:#fff;padding:0.5rem 1.2rem;font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;align-items:center;gap:0.35rem;z-index:4;white-space:nowrap}
+          .mobile-view-btn{display:flex!important;position:absolute;bottom:50px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, #06b6d4, #14b8a6);border:none;color:#fff;padding:0.5rem 1.2rem;font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;align-items:center;gap:0.35rem;z-index:4;white-space:nowrap;border-radius:8px}
         }
 
-        /* ═══════════════════════════════════════════
-           SMALL MOBILE — max-width: 480px
-        ═══════════════════════════════════════════ */
         @media(max-width:480px){
           .stats-grid{grid-template-columns:1fr!important;gap:1rem!important}
           .filter-row{gap:0.35rem!important}
@@ -573,6 +651,7 @@ export default function Portfolio() {
         }
       `}</style>
 
+      <AnimatedBackground />
       <Cursor />
       {!ready && <Splash onDone={() => setReady(true)} />}
       {lightbox && <Lightbox project={lightbox.project} initialIndex={lightbox.index} onClose={() => setLightbox(null)} />}
@@ -582,33 +661,31 @@ export default function Portfolio() {
       {ready && (
         <div style={{ animation: "fadeUp .5s ease forwards" }}>
 
-          {/* ── NAVBAR ── */}
-          <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "1.1rem 3rem", display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(3,7,18,0.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.border}` }}>
+          <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "1.1rem 3rem", display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(3,7,18,0.92)", backdropFilter: "blur(24px)", borderBottom: "1px solid rgba(6,182,212,0.15)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <div style={{ width: 34, height: 34, borderRadius: "50%", overflow: "hidden", border: `2px solid ${C.blue}`, flexShrink: 0, background: C.bg3 }}>
+              <div style={{ width: 34, height: 34, borderRadius: "50%", overflow: "hidden", border: "2px solid #06b6d4", flexShrink: 0, background: "#1e293b" }}>
                 <img src="/logoprofile.jpeg" alt="ARF" style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  onError={e => { e.target.style.display = "none"; e.target.parentElement.innerHTML += "<span style='font-family:Playfair Display,serif;color:#3b82f6;font-size:.7rem;display:flex;align-items:center;justify-content:center;width:100%;height:100%'>AR</span>"; }}
+                  onError={e => { e.target.style.display = "none"; e.target.parentElement.innerHTML += "<span style='font-family:Playfair Display,serif;color:#06b6d4;font-size:.7rem;display:flex;align-items:center;justify-content:center;width:100%;height:100%'>AR</span>"; }}
                 />
               </div>
-              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.75rem", letterSpacing: "0.15em", color: C.blueL }}>ARF<span style={{ color: C.blue }}>.</span></span>
+              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.75rem", letterSpacing: "0.15em", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>ARF<span style={{ color: "#06b6d4" }}>.</span></span>
             </div>
 
             <ul className="nav-links">
               {["home", "about", "experience", "project", "sertifikat", "contact"].map(id => (
                 <li key={id}>
-                  <a href={`#${id}`} className="nav-link" style={{ color: active === id ? C.blue : C.muted, borderBottom: active === id ? `1px solid ${C.blue}` : "1px solid transparent" }}>{id}</a>
+                  <a href={`#${id}`} className="nav-link" style={{ color: active === id ? "#06b6d4" : "#64748b" }}>{id}</a>
                 </li>
               ))}
               <li>
-                <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="nav-cv-btn"
-                  style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#fff", background: C.blue, padding: "0.45rem 1rem", transition: "background .2s" }}
-                  onMouseEnter={e => e.currentTarget.style.background = C.blueD}
-                  onMouseLeave={e => e.currentTarget.style.background = C.blue}
-                >↓ CV</a>
+                <MagneticButton href={CV_URL} target="_blank" rel="noopener noreferrer" className="nav-cv-btn"
+                  style={{
+                    display: "flex", alignItems: "center", gap: "0.4rem", fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#fff", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", padding: "0.45rem 1rem", borderRadius: 8, transition: "all .3s"
+                  }}
+                >↓ CV</MagneticButton>
               </li>
             </ul>
 
-            {/* Hamburger */}
             <button className="hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
               <span style={{ transform: menuOpen ? "rotate(45deg) translate(5px,5px)" : "none" }} />
               <span style={{ opacity: menuOpen ? 0 : 1 }} />
@@ -616,54 +693,54 @@ export default function Portfolio() {
             </button>
           </nav>
 
-          {/* ── HERO ── */}
           <section id="home" className="hero-section" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "0 3rem", position: "relative", overflow: "hidden" }}>
-            <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(59,130,246,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.035) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
-            <div style={{ position: "absolute", top: "25%", right: "8%", width: 520, height: 520, background: "radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%)", pointerEvents: "none" }} />
+            <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(6,182,212,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.03) 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+            <div style={{ position: "absolute", top: "25%", right: "8%", width: 520, height: 520, background: "radial-gradient(circle,rgba(6,182,212,.08) 0%,transparent 65%)", pointerEvents: "none", borderRadius: "50%" }} />
+            <div style={{ position: "absolute", bottom: "15%", left: "5%", width: 420, height: 420, background: "radial-gradient(circle,rgba(249,115,22,.06) 0%,transparent 65%)", pointerEvents: "none", borderRadius: "50%" }} />
 
             <div className="hero-inner" style={{ position: "relative", zIndex: 2, maxWidth: 940, paddingTop: "6rem", width: "100%" }}>
               <div className="rv" style={{ display: "flex", alignItems: "center", gap: "1.25rem", marginBottom: "2rem" }}>
                 <div style={{ position: "relative", flexShrink: 0 }}>
-                  <div style={{ width: 80, height: 80, borderRadius: "50%", overflow: "hidden", border: `3px solid ${C.blue}`, background: C.bg3 }}>
+                  <div style={{ width: 80, height: 80, borderRadius: "50%", overflow: "hidden", border: "3px solid #06b6d4", background: "#1e293b", boxShadow: "0 0 30px rgba(6,182,212,0.2)" }}>
                     <img src="/logoprofile.jpeg" alt="Adha Raka" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   </div>
-                  <div style={{ position: "absolute", bottom: 3, right: 3, width: 13, height: 13, background: "#22c55e", borderRadius: "50%", border: "2px solid #030712" }} />
+                  <div style={{ position: "absolute", bottom: 3, right: 3, width: 13, height: 13, background: "#22c55e", borderRadius: "50%", border: "2px solid #030712", boxShadow: "0 0 12px rgba(34,197,94,0.5)" }} />
                 </div>
                 <div>
-                  <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.35em", color: C.blue, textTransform: "uppercase", marginBottom: "0.2rem" }}>Available for Work</p>
-                  <p style={{ fontSize: "0.82rem", color: C.faint }}>Full Stack Developer · Purwakarta, ID</p>
+                  <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.35em", color: "#06b6d4", textTransform: "uppercase", marginBottom: "0.2rem" }}>Available for Work</p>
+                  <p style={{ fontSize: "0.82rem", color: "#94a3b8" }}>Full Stack Developer · Purwakarta, ID</p>
                 </div>
               </div>
 
-              <p className="rv d1" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", color: C.blue, textTransform: "uppercase", marginBottom: "0.875rem" }}>Hello, I'm</p>
+              <p className="rv d1" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.65rem", letterSpacing: "0.4em", color: "#06b6d4", textTransform: "uppercase", marginBottom: "0.875rem" }}>Hello, I'm</p>
               <h1 className="rv d2" style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2.8rem,9vw,6.5rem)", fontWeight: 400, lineHeight: 1, marginBottom: "0.3rem" }}>Adha Raka</h1>
-              <h1 className="rv d3" style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2.8rem,9vw,6.5rem)", fontWeight: 400, fontStyle: "italic", lineHeight: 1, color: C.blueL, marginBottom: "1.25rem" }}>Firmansyah</h1>
-              <p className="rv d3" style={{ fontSize: "clamp(0.85rem,2.5vw,1.05rem)", color: C.faint, letterSpacing: "0.08em", marginBottom: "1.5rem" }}>Front End · Full Stack Developer</p>
+              <h1 className="rv d3" style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2.8rem,9vw,6.5rem)", fontWeight: 400, fontStyle: "italic", lineHeight: 1, background: "linear-gradient(135deg, #06b6d4, #14b8a6, #f97316)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: "1.25rem" }}>Firmansyah</h1>
+              <p className="rv d3" style={{ fontSize: "clamp(0.85rem,2.5vw,1.05rem)", color: "#94a3b8", letterSpacing: "0.08em", marginBottom: "1.5rem" }}>Front End · Full Stack Developer</p>
               <p className="rv d4" style={{ maxWidth: 560, lineHeight: 1.85, color: "#94a3b8", fontSize: "clamp(0.82rem,2vw,0.93rem)", marginBottom: "2.25rem" }}>
                 Mahasiswa Teknik Perangkat Lunak / Sistem Informasi berpengalaman sebagai Full-Stack Developer. Mahir dalam PHP, Laravel, ASP.NET, C#, dan pengelolaan database SQL Server & MySQL.
               </p>
 
               <div className="rv d4 hero-btns" style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap", marginBottom: "3.5rem" }}>
-                <a href="#project" style={{ background: C.blue, color: "#fff", padding: "0.875rem 2rem", fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", display: "inline-flex", alignItems: "center", justifyContent: "center", transition: "background .25s" }}
-                  onMouseEnter={e => e.currentTarget.style.background = C.blueD}
-                  onMouseLeave={e => e.currentTarget.style.background = C.blue}
-                >Lihat Project</a>
-                <a href={CV_URL} target="_blank" rel="noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "transparent", color: C.blueL, border: `1px solid ${C.blue}`, padding: "0.875rem 1.75rem", fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", transition: "all .25s" }}
-                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(59,130,246,0.1)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}
-                ><span>↓</span> Download CV</a>
-                <a href="#contact" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.faint, transition: "color .25s" }}
-                  onMouseEnter={e => e.currentTarget.style.color = C.blue}
-                  onMouseLeave={e => e.currentTarget.style.color = C.faint}
-                >Hubungi Saya →</a>
+                <MagneticButton href="#project" style={{ background: "linear-gradient(135deg, #06b6d4, #14b8a6)", color: "#fff", padding: "0.875rem 2rem", fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 8, border: "none", cursor: "pointer", boxShadow: "0 12px 32px rgba(6,182,212,0.25)", transition: "all .3s" }}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0 20px 48px rgba(6,182,212,0.4)"}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = "0 12px 32px rgba(6,182,212,0.25)"}
+                >Lihat Project</MagneticButton>
+                <MagneticButton href={CV_URL} target="_blank" rel="noopener noreferrer"
+                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "transparent", color: "#06b6d4", border: "1.5px solid #06b6d4", padding: "0.875rem 1.75rem", fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", transition: "all .3s", borderRadius: 8, cursor: "pointer" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(6,182,212,0.12)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+                ><span>↓</span> Download CV</MagneticButton>
+                <MagneticButton href="#contact" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#94a3b8", transition: "color .25s", background: "none", border: "none", cursor: "pointer" }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#06b6d4"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#94a3b8"}
+                >Hubungi Saya →</MagneticButton>
               </div>
 
               <div className="rv logo-strip" style={{ display: "flex", gap: "0.625rem", flexWrap: "wrap" }}>
                 {Object.entries(LOGO).map(([key, src]) => (
-                  <div key={key} title={key} style={{ width: 54, height: 54, display: "flex", alignItems: "center", justifyContent: "center", background: C.bg2, border: `1px solid ${C.border}`, padding: "0.5rem", transition: "border-color .25s,background .25s" }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = C.blue; e.currentTarget.style.background = C.bg3; }}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.background = C.bg2; }}
+                  <div key={key} title={key} style={{ width: 54, height: 54, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(15,23,42,0.5)", border: "1px solid rgba(6,182,212,0.15)", backdropFilter: "blur(12px)", padding: "0.5rem", transition: "all .3s", borderRadius: 8, cursor: "pointer" }}
+                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#06b6d4"; e.currentTarget.style.background = "rgba(6,182,212,0.1)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(6,182,212,0.15)"; e.currentTarget.style.background = "rgba(15,23,42,0.5)"; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
                     <img src={src} alt={key} style={{ width: 24, height: 24, objectFit: "contain" }} />
                   </div>
@@ -672,82 +749,77 @@ export default function Portfolio() {
             </div>
 
             <div className="scroll-indicator" style={{ position: "absolute", bottom: "2.5rem", left: "3rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-              <div style={{ width: 1, height: 50, background: `linear-gradient(to bottom,${C.blue},transparent)`, animation: "breathe 2s infinite" }} />
-              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.3em", color: C.muted, textTransform: "uppercase", writingMode: "vertical-rl" }}>Scroll</span>
+              <div style={{ width: 1, height: 50, background: "linear-gradient(to bottom,#06b6d4,transparent)", animation: "breathe 2s infinite" }} />
+              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.3em", color: "#64748b", textTransform: "uppercase", writingMode: "vertical-rl" }}>Scroll</span>
             </div>
           </section>
 
-          {/* ── ABOUT ── */}
-          <section id="about" style={{ padding: "8rem 3rem 5rem", background: C.bg2 }}>
+          <section id="about" style={{ padding: "8rem 3rem 5rem", background: "linear-gradient(180deg, #0f172a 0%, #030712 100%)" }}>
             <SectionHead label="About Me" title="Tentang" italic="Saya" />
             <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "310px 1fr", gap: "5rem", alignItems: "start" }}>
               <div className="about-photo rv" style={{ position: "relative" }}>
-                <div style={{ border: `1px solid ${C.border}`, overflow: "hidden", background: C.bg3 }}>
+                <div style={{ border: "1px solid rgba(6,182,212,0.2)", overflow: "hidden", background: "#1e293b", borderRadius: 12, boxShadow: "0 0 32px rgba(6,182,212,0.15)" }}>
                   <img src="/logoprofile.jpeg" alt="Adha Raka Firmansyah" style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4" }}
                     onError={e => { e.target.style.display = "none"; }}
                   />
                 </div>
-                <div style={{ position: "absolute", top: 16, left: 16, right: -16, bottom: -16, border: `1px solid ${C.blue}18`, zIndex: -1 }} />
-                <div style={{ background: C.bg, border: `1px solid ${C.border}`, padding: "1.25rem", marginTop: "1.5rem" }}>
+                <div style={{ position: "absolute", top: 16, left: 16, right: -16, bottom: -16, border: "1px solid rgba(6,182,212,0.08)", zIndex: -1, borderRadius: 12 }} />
+                <div style={{ background: "rgba(15,23,42,0.5)", backdropFilter: "blur(16px)", border: "1px solid rgba(6,182,212,0.15)", padding: "1.25rem", marginTop: "1.5rem", borderRadius: 12 }}>
                   {[["📧", "rakafirmansyah292@gmail.com"], ["📱", "085280554501"], ["📍", "Purwakarta, Jawa Barat"], ["🌐", "adharaka.netlify.app"]].map(([icon, val]) => (
-                    <div key={val} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start", padding: "0.6rem 0", borderBottom: `1px solid ${C.border}` }}>
+                    <div key={val} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start", padding: "0.6rem 0", borderBottom: "1px solid rgba(6,182,212,0.1)" }}>
                       <span style={{ fontSize: "0.85rem", flexShrink: 0 }}>{icon}</span>
-                      <span style={{ fontSize: "0.75rem", color: C.faint, wordBreak: "break-all", lineHeight: 1.5 }}>{val}</span>
+                      <span style={{ fontSize: "0.75rem", color: "#94a3b8", wordBreak: "break-all", lineHeight: 1.5 }}>{val}</span>
                     </div>
                   ))}
-                  <a href={CV_URL} target="_blank" rel="noopener noreferrer"
-                    style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", marginTop: "1rem", padding: "0.7rem", background: "rgba(59,130,246,0.08)", border: `1px solid ${C.border}`, fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase", color: C.blueL, transition: "all .25s" }}
-                    onMouseEnter={e => { e.currentTarget.style.background = "rgba(59,130,246,0.15)"; e.currentTarget.style.borderColor = C.blue; }}
-                    onMouseLeave={e => { e.currentTarget.style.background = "rgba(59,130,246,0.08)"; e.currentTarget.style.borderColor = C.border; }}
-                  >↓ Download CV</a>
+                  <MagneticButton href={CV_URL} target="_blank" rel="noopener noreferrer"
+                    style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", marginTop: "1rem", padding: "0.7rem", background: "rgba(6,182,212,0.1)", border: "1px solid rgba(6,182,212,0.2)", fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#06b6d4", transition: "all .3s", borderRadius: 8, cursor: "pointer" }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(6,182,212,0.2)"; e.currentTarget.style.borderColor = "#06b6d4"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(6,182,212,0.1)"; e.currentTarget.style.borderColor = "rgba(6,182,212,0.2)"; }}
+                  >↓ Download CV</MagneticButton>
                 </div>
               </div>
 
               <div>
-                {/* Mobile: show contact info inline */}
-                <div className="rv mobile-contact" style={{ display: "none", background: C.bg, border: `1px solid ${C.border}`, padding: "1rem", marginBottom: "1.5rem", borderRadius: 2 }}>
+                <div className="rv mobile-contact" style={{ display: "none", background: "rgba(15,23,42,0.5)", backdropFilter: "blur(16px)", border: "1px solid rgba(6,182,212,0.15)", padding: "1rem", marginBottom: "1.5rem", borderRadius: 12 }}>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
                     {[["📧", "rakafirmansyah292@gmail.com"], ["📱", "085280554501"], ["📍", "Purwakarta, Jawa Barat"], ["🌐", "adharaka.netlify.app"]].map(([icon, val]) => (
                       <div key={val} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
                         <span style={{ fontSize: "0.8rem", flexShrink: 0 }}>{icon}</span>
-                        <span style={{ fontSize: "0.7rem", color: C.faint, wordBreak: "break-all", lineHeight: 1.4 }}>{val}</span>
+                        <span style={{ fontSize: "0.7rem", color: "#94a3b8", wordBreak: "break-all", lineHeight: 1.4 }}>{val}</span>
                       </div>
                     ))}
                   </div>
-                  <a href={CV_URL} target="_blank" rel="noopener noreferrer"
-                    style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", marginTop: "0.875rem", padding: "0.65rem", background: "rgba(59,130,246,0.08)", border: `1px solid ${C.border}`, fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase", color: C.blueL }}
-                  >↓ Download CV</a>
                 </div>
 
                 <div className="rv d1" style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "0" }}>
-                  <p style={{ lineHeight: 1.9, color: "#94a3b8" }}>Halo! Saya <strong style={{ color: C.blueL }}>Adha Raka Firmansyah</strong>, mahasiswa Teknik Perangkat Lunak / Sistem Informasi yang dinamis dan bersemangat.</p>
+                  <p style={{ lineHeight: 1.9, color: "#94a3b8" }}>Halo! Saya <strong style={{ color: "#06b6d4" }}>Adha Raka Firmansyah</strong>, mahasiswa Teknik Perangkat Lunak / Sistem Informasi yang dinamis dan bersemangat.</p>
                   <p style={{ lineHeight: 1.9, color: "#94a3b8" }}>Mahir dalam PHP, C#, JavaScript, serta pengelolaan database SQL Server, MySQL, dan integrasi Grafana & Oracle. Pengalaman magang solid di digitalisasi dan pengembangan sistem informasi.</p>
                   <p style={{ lineHeight: 1.9, color: "#94a3b8" }}>Mampu bekerja mandiri maupun dalam tim dengan kemampuan teknis dan komunikasi yang kuat.</p>
                 </div>
 
-                <div className="rv d2 stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", margin: "2.5rem 0", padding: "2rem 0", borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}` }}>
+                <div className="rv d2 stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", margin: "2.5rem 0", padding: "2rem 0", borderTop: "1px solid rgba(6,182,212,0.15)", borderBottom: "1px solid rgba(6,182,212,0.15)" }}>
                   {[["4+", "Pengalaman Magang"], ["8+", "Project Selesai"], ["11+", "Sertifikat"]].map(([n, l]) => (
                     <div key={l}>
-                      <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2rem,6vw,3rem)", fontWeight: 400, color: C.blue, lineHeight: 1 }}>{n}</div>
-                      <div style={{ fontSize: "0.72rem", color: C.muted, marginTop: "0.25rem" }}>{l}</div>
+                      <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(2rem,6vw,3rem)", fontWeight: 400, background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1 }}>{n}</div>
+                      <div style={{ fontSize: "0.72rem", color: "#64748b", marginTop: "0.25rem" }}>{l}</div>
                     </div>
                   ))}
                 </div>
 
                 <div className="rv d3">
-                  <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.3em", color: C.blue, textTransform: "uppercase", marginBottom: "1.5rem" }}>Tech Skills</p>
+                  <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.3em", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textTransform: "uppercase", marginBottom: "1.5rem" }}>Tech Skills</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
                     {SKILLS_TECH.map(s => (
                       <div key={s.name}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.3rem" }}>
-                          <span style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.8rem", color: C.faint }}>
+                          <span style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.8rem", color: "#94a3b8" }}>
                             {LOGO[s.icon] && <img src={LOGO[s.icon]} alt={s.name} style={{ width: 16, height: 16, objectFit: "contain" }} />}
                             {s.name}
                           </span>
-                          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", color: C.muted }}>{s.level}%</span>
+                          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", color: "#64748b" }}>{s.level}%</span>
                         </div>
-                        <div style={{ height: 3, background: C.bg3, borderRadius: 2, overflow: "hidden" }}>
-                          <div style={{ height: "100%", width: `${s.level}%`, background: `linear-gradient(90deg,${C.blue},${C.blueL})`, borderRadius: 2 }} />
+                        <div style={{ height: 3, background: "rgba(6,182,212,0.1)", borderRadius: 2, overflow: "hidden" }}>
+                          <div style={{ height: "100%", width: `${s.level}%`, background: "linear-gradient(90deg, #06b6d4, #14b8a6)", borderRadius: 2, transition: "width .6s ease" }} />
                         </div>
                       </div>
                     ))}
@@ -757,32 +829,23 @@ export default function Portfolio() {
             </div>
           </section>
 
-          {/* Mobile contact card — shown on mobile */}
-          <style>{`
-            @media(max-width:768px){
-              .about-photo{display:none!important}
-              .mobile-contact{display:block!important}
-            }
-          `}</style>
-
-          {/* ── EXPERIENCE ── */}
           <section id="experience" style={{ padding: "8rem 3rem 5rem" }}>
             <SectionHead label="Experience" title="Pengalaman" italic="Kerja" />
             <div style={{ position: "relative", paddingLeft: "2rem" }}>
-              <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 1, background: `linear-gradient(to bottom,${C.blue},transparent)` }} />
+              <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 1, background: "linear-gradient(to bottom, #06b6d4, #14b8a6, transparent)" }} />
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {EXPERIENCES.map((exp, i) => (
                   <div key={i} className={`rv d${(i % 3) + 1}`} style={{ position: "relative" }}>
-                    <div style={{ position: "absolute", left: -2 - 8, top: 10, width: 15, height: 15, borderRadius: "50%", background: exp.active ? C.blue : C.bg2, border: `2px solid ${C.blue}` }} />
+                    <div style={{ position: "absolute", left: -2 - 8, top: 10, width: 15, height: 15, borderRadius: "50%", background: exp.active ? "#06b6d4" : "#0f172a", border: "2px solid #06b6d4", boxShadow: exp.active ? "0 0 16px rgba(6,182,212,0.6)" : "none" }} />
                     <div className="exp-card">
                       <div className="exp-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.875rem" }}>
                         <div>
                           <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.95rem,2.5vw,1.15rem)", fontWeight: 500, marginBottom: "0.2rem" }}>{exp.role}</h3>
-                          <p style={{ fontSize: "0.82rem", color: C.blueL, fontWeight: 500 }}>{exp.company}</p>
+                          <p style={{ fontSize: "0.82rem", color: "#06b6d4", fontWeight: 500 }}>{exp.company}</p>
                         </div>
                         <div>
-                          <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", color: C.muted, marginBottom: "0.35rem" }}>{exp.period}</p>
-                          <span style={{ background: "rgba(59,130,246,0.1)", border: `1px solid ${C.border}`, padding: "0.12rem 0.5rem", fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", color: C.blue, textTransform: "uppercase", letterSpacing: "0.1em" }}>{exp.type}</span>
+                          <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", color: "#64748b", marginBottom: "0.35rem" }}>{exp.period}</p>
+                          <span style={{ background: "rgba(6,182,212,0.1)", border: "1px solid rgba(6,182,212,0.2)", padding: "0.12rem 0.5rem", fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", color: "#06b6d4", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: 4 }}>{exp.type}</span>
                         </div>
                       </div>
                       <ul style={{ paddingLeft: "1.1rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
@@ -795,109 +858,122 @@ export default function Portfolio() {
             </div>
 
             <div style={{ marginTop: "4rem" }}>
-              <p className="rv" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.3em", color: C.blue, textTransform: "uppercase", marginBottom: "1.5rem" }}>Riwayat Pendidikan</p>
+              <p className="rv" style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.3em", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textTransform: "uppercase", marginBottom: "1.5rem" }}>Riwayat Pendidikan</p>
               <div className="edu-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.25rem" }}>
                 {[
                   { school: "Universitas Siber Asia", major: "PJJ S1 Sistem Informasi", period: "Sep 2025 – Sep 2027" },
                   { school: "LP3I College Purwakarta", major: "Application Software Engineering", period: "Sep 2023 – Sep 2025" },
                   { school: "SMKN 1 Purwakarta", major: "Teknik Komputer & Jaringan (Axioo)", period: "Mar 2020 – Mar 2023" },
                 ].map((ed, i) => (
-                  <div key={i} className={`rv d${i + 1}`} style={{ background: C.bg2, border: `1px solid ${C.border}`, padding: "1.5rem" }}>
-                    <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.52rem", letterSpacing: "0.12em", color: C.blue, textTransform: "uppercase", marginBottom: "0.6rem" }}>{ed.period}</p>
+                  <div key={i} className={`rv d${i + 1}`} style={{ background: "rgba(15,23,42,0.5)", backdropFilter: "blur(16px)", border: "1px solid rgba(6,182,212,0.15)", padding: "1.5rem", borderRadius: 12, transition: "all .3s" }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(6,182,212,0.4)";
+                      e.currentTarget.style.background = "rgba(6,182,212,0.05)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(6,182,212,0.15)";
+                      e.currentTarget.style.background = "rgba(15,23,42,0.5)";
+                    }}
+                  >
+                    <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.52rem", letterSpacing: "0.12em", color: "#06b6d4", textTransform: "uppercase", marginBottom: "0.6rem" }}>{ed.period}</p>
                     <h4 style={{ fontFamily: "'Playfair Display',serif", fontSize: "0.95rem", fontWeight: 500, marginBottom: "0.4rem" }}>{ed.school}</h4>
-                    <p style={{ fontSize: "0.76rem", color: C.faint }}>{ed.major}</p>
+                    <p style={{ fontSize: "0.76rem", color: "#94a3b8" }}>{ed.major}</p>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* ── PROJECTS ── */}
-          <section id="project" style={{ padding: "8rem 3rem 5rem", background: C.bg2 }}>
+          <section id="project" style={{ padding: "8rem 3rem 5rem", background: "linear-gradient(180deg, #0f172a 0%, #030712 100%)" }}>
             <SectionHead label="Portfolio" title="Project" italic="Unggulan" />
-            <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "1.25rem" }}>
+            <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "1.5rem" }}>
               {PROJECTS.map(p => (
                 <ProjectCard key={p.id} p={p} onOpenLightbox={(proj, idx) => setLightbox({ project: proj, index: idx })} />
               ))}
             </div>
           </section>
 
-          {/* ── CERTIFICATES ── */}
           <section id="sertifikat" style={{ padding: "8rem 3rem 5rem" }}>
             <SectionHead label="Achievements" title="Sertifikat &" italic="Penghargaan" />
             <div className="rv filter-row" style={{ display: "flex", gap: "0.5rem", marginBottom: "2.5rem", flexWrap: "wrap" }}>
               {CERT_CATEGORIES.map(cat => (
                 <button key={cat} onClick={() => setCertFilter(cat)} className={`filter-btn${certFilter === cat ? " active" : ""}`}>{cat}</button>
               ))}
-              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.2em", color: C.muted, alignSelf: "center", marginLeft: "0.25rem" }}>{filteredCerts.length} sertifikat</span>
+              <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.5rem", letterSpacing: "0.2em", color: "#64748b", alignSelf: "center", marginLeft: "0.25rem" }}>{filteredCerts.length} sertifikat</span>
             </div>
 
-            <div className="cert-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1rem" }}>
+            <div className="cert-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.25rem" }}>
               {filteredCerts.map((c, i) => (
                 <div
                   key={i}
                   className={`cert-card rv d${(i % 3) + 1}`}
                   onClick={() => setCertModal(c)}
-                  style={{ background: C.bg2, border: `1px solid ${C.border}`, padding: "1.25rem", cursor: "pointer", position: "relative", overflow: "hidden" }}
+                  style={{ background: "rgba(15,23,42,0.5)", backdropFilter: "blur(16px)", border: "1px solid rgba(6,182,212,0.15)", padding: "1.5rem", cursor: "pointer", position: "relative", overflow: "hidden", borderRadius: 12 }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(6,182,212,0.4)";
+                    e.currentTarget.style.background = "rgba(6,182,212,0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(6,182,212,0.15)";
+                    e.currentTarget.style.background = "rgba(15,23,42,0.5)";
+                  }}
                 >
-                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${C.blue},transparent)` }} />
+                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg, #06b6d4, transparent)` }} />
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.875rem" }}>
-                    <div style={{ width: 40, height: 40, border: `1px solid ${C.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", background: C.bg3 }}>{c.icon}</div>
+                    <div style={{ width: 40, height: 40, border: "1px solid rgba(6,182,212,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", background: "rgba(6,182,212,0.05)", borderRadius: 8 }}>{c.icon}</div>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.25rem" }}>
-                      <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.52rem", color: C.blue, letterSpacing: "0.1em" }}>{c.year}</span>
-                      <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.42rem", letterSpacing: "0.08em", color: "#475569", background: "rgba(59,130,246,0.06)", border: `1px solid ${C.border}`, padding: "0.1rem 0.35rem", textTransform: "uppercase" }}>{c.category}</span>
+                      <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.52rem", color: "#06b6d4", letterSpacing: "0.1em" }}>{c.year}</span>
+                      <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.42rem", letterSpacing: "0.08em", color: "#64748b", background: "rgba(6,182,212,0.08)", border: "1px solid rgba(6,182,212,0.15)", padding: "0.1rem 0.35rem", textTransform: "uppercase", borderRadius: 3 }}>{c.category}</span>
                     </div>
                   </div>
-                  <h4 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.8rem,2vw,0.95rem)", fontWeight: 400, marginBottom: "0.3rem", color: "#e2e8f0", lineHeight: 1.3 }}>{c.name}</h4>
-                  <p style={{ fontSize: "0.7rem", color: C.muted, marginBottom: "0.875rem" }}>{c.issuer}</p>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", paddingTop: "0.6rem", borderTop: `1px solid ${C.border}` }}>
-                    <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.48rem", letterSpacing: "0.12em", color: C.blue, textTransform: "uppercase" }}>View</span>
-                    {c.images.length > 1 && <span style={{ fontSize: "0.65rem", color: C.blue }}>({c.images.length})</span>}
-                    <span style={{ marginLeft: "auto", color: C.blue, fontSize: "0.85rem" }}>→</span>
+                  <h4 style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.8rem,2vw,0.95rem)", fontWeight: 400, marginBottom: "0.3rem", color: "#f1f5f9", lineHeight: 1.3 }}>{c.name}</h4>
+                  <p style={{ fontSize: "0.7rem", color: "#64748b", marginBottom: "0.875rem" }}>{c.issuer}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", paddingTop: "0.6rem", borderTop: "1px solid rgba(6,182,212,0.1)" }}>
+                    <span style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.48rem", letterSpacing: "0.12em", color: "#06b6d4", textTransform: "uppercase" }}>View</span>
+                    {c.images.length > 1 && <span style={{ fontSize: "0.65rem", color: "#06b6d4" }}>({c.images.length})</span>}
+                    <span style={{ marginLeft: "auto", color: "#06b6d4", fontSize: "0.85rem" }}>→</span>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* ── CONTACT ── */}
-          <section id="contact" style={{ padding: "8rem 3rem 5rem", background: C.bg2 }}>
+          <section id="contact" style={{ padding: "8rem 3rem 5rem", background: "linear-gradient(180deg, #0f172a 0%, #030712 100%)" }}>
             <SectionHead label="Contact" title="Mari" italic="Berkolaborasi" />
             <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem" }}>
               <div className="rv">
-                <a href="mailto:rakafirmansyah292@gmail.com" style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.9rem,2.5vw,1.4rem)", color: C.blueL, display: "block", marginBottom: "1.5rem", paddingBottom: "1.25rem", borderBottom: `1px solid ${C.border}`, wordBreak: "break-all" }}>rakafirmansyah292@gmail.com</a>
+                <a href="mailto:rakafirmansyah292@gmail.com" style={{ fontFamily: "'Playfair Display',serif", fontSize: "clamp(0.9rem,2.5vw,1.4rem)", background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", display: "block", marginBottom: "1.5rem", paddingBottom: "1.25rem", borderBottom: "1px solid rgba(6,182,212,0.15)", wordBreak: "break-all" }}>rakafirmansyah292@gmail.com</a>
                 <p style={{ color: "#94a3b8", lineHeight: 1.85, marginBottom: "2rem", fontSize: "0.9rem" }}>Terbuka untuk freelance, kolaborasi project, dan kesempatan kerja baru. Jangan ragu untuk menghubungi saya!</p>
-                <a href={CV_URL} target="_blank" rel="noopener noreferrer"
-                  style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "1rem 1.5rem", background: "rgba(59,130,246,0.06)", border: `1px solid ${C.border}`, marginBottom: "1.25rem", transition: "all .25s" }}
-                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(59,130,246,0.12)"; e.currentTarget.style.borderColor = C.blue; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = "rgba(59,130,246,0.06)"; e.currentTarget.style.borderColor = C.border; }}
+                <MagneticButton href={CV_URL} target="_blank" rel="noopener noreferrer"
+                  style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "1rem 1.5rem", background: "rgba(6,182,212,0.08)", border: "1px solid rgba(6,182,212,0.2)", marginBottom: "1.25rem", transition: "all .3s", borderRadius: 8, cursor: "pointer" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(6,182,212,0.15)"; e.currentTarget.style.borderColor = "#06b6d4"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(6,182,212,0.08)"; e.currentTarget.style.borderColor = "rgba(6,182,212,0.2)"; }}
                 >
-                  <span style={{ color: C.blue, fontSize: "1.1rem" }}>⬇</span>
+                  <span style={{ color: "#06b6d4", fontSize: "1.1rem" }}>⬇</span>
                   <div>
-                    <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.faint, marginBottom: "0.1rem" }}>Curriculum Vitae</p>
-                    <p style={{ fontSize: "0.72rem", color: C.muted }}>Adha Raka Firmansyah — PDF</p>
+                    <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#94a3b8", marginBottom: "0.1rem" }}>Curriculum Vitae</p>
+                    <p style={{ fontSize: "0.72rem", color: "#64748b" }}>Adha Raka Firmansyah — PDF</p>
                   </div>
-                  <span style={{ marginLeft: "auto", fontFamily: "'Space Mono',monospace", fontSize: "0.48rem", color: C.blue, letterSpacing: "0.08em" }}>OPEN →</span>
-                </a>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                  <span style={{ marginLeft: "auto", fontFamily: "'Space Mono',monospace", fontSize: "0.48rem", color: "#06b6d4", letterSpacing: "0.08em" }}>OPEN →</span>
+                </MagneticButton>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   {[{ name: "GitHub", handle: "@adharaka", icon: "◈" }, { name: "LinkedIn", handle: "Adha Raka Firmansyah", icon: "◉" }, { name: "Portfolio", handle: "adharaka.netlify.app", icon: "◍" }, { name: "WhatsApp", handle: "085280554501", icon: "◎" }].map(s => (
-                    <a key={s.name} href="#" className="social-link">
-                      <span style={{ color: C.blue, fontSize: "1rem" }}>{s.icon}</span>
+                    <MagneticButton key={s.name} as="div" className="social-link">
+                      <span style={{ color: "#06b6d4", fontSize: "1rem" }}>{s.icon}</span>
                       <div>
-                        <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.faint, marginBottom: "0.1rem" }}>{s.name}</p>
-                        <p style={{ fontSize: "0.72rem", color: C.muted }}>{s.handle}</p>
+                        <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#94a3b8", marginBottom: "0.1rem" }}>{s.name}</p>
+                        <p style={{ fontSize: "0.72rem", color: "#64748b" }}>{s.handle}</p>
                       </div>
-                    </a>
+                    </MagneticButton>
                   ))}
                 </div>
               </div>
             </div>
           </section>
 
-          {/* ── FOOTER ── */}
-          <footer style={{ padding: "2rem 3rem", borderTop: `1px solid ${C.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-            <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.1em", color: C.muted }}>© 2025 <span style={{ color: C.blueL }}>Adha Raka Firmansyah</span>. All rights reserved.</p>
-            <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.1em", color: C.muted }}>Built with <span style={{ color: C.blue }}>Next.js</span> · <span style={{ color: C.blue }}>TailwindCSS</span></p>
+          <footer style={{ padding: "2rem 3rem", borderTop: "1px solid rgba(6,182,212,0.15)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+            <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.1em", color: "#64748b" }}>© 2025 <span style={{ background: "linear-gradient(135deg, #06b6d4, #14b8a6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Adha Raka Firmansyah</span>. All rights reserved.</p>
+            <p style={{ fontFamily: "'Space Mono',monospace", fontSize: "0.6rem", letterSpacing: "0.1em", color: "#64748b" }}>Built with <span style={{ color: "#06b6d4" }}>React</span> · <span style={{ color: "#14b8a6" }}>TypeScript</span></p>
           </footer>
 
         </div>
