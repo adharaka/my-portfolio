@@ -878,7 +878,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="rv d2 stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1.5rem", margin: "2.5rem 0", padding: "2rem 0", borderTop: "1px solid rgba(37,99,235,0.15)", borderBottom: "1px solid rgba(37,99,235,0.15)" }}>
-                  {[["4+", "Pengalaman Magang"], ["8+", "Project Selesai"], ["11+", "Sertifikat"]].map(([n, l]) => (
+                  {[["4+", "Pengalaman Magang"], ["11+", "Project Selesai"], ["11+", "Sertifikat"]].map(([n, l]) => (
                     <div key={l}>
                       <div style={{ fontFamily: "'Sora',sans-serif", fontSize: "clamp(2rem,6vw,3rem)", fontWeight: 400, background: "linear-gradient(135deg, #2563eb, #3b82f6)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", lineHeight: 1 }}>{n}</div>
                       <div style={{ fontSize: "0.72rem", color: "#64748b", marginTop: "0.25rem" }}>{l}</div>
