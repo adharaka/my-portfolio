@@ -102,7 +102,7 @@ const CERTIFICATES = [
   { name: "ACP #3 — Pemecahan Masalah Perangkat Keras", issuer: "Axioo Class Program", year: "2021", icon: "🛠️", category: "Akademik", images: ["/sertifikat/sertifikat-acp3.jpg", "/sertifikat/sertifikat-acp3nilai.jpg"] },
   { name: "ACP — Dasar-Dasar Desain Grafis", issuer: "Axioo Class Program", year: "2021", icon: "🎨", category: "Akademik", images: ["/sertifikat/sertifikat-acp-design.jpg", "/sertifikat/sertifikat-acp-design2.jpg"] },
   { name: "ACP — Dasar-Dasar Logika Makeblock", issuer: "Axioo Class Program", year: "2021", icon: "⚙️", category: "Akademik", images: ["/sertifikat/makeblock-sertifikat.jpg", "/sertifikat/makeblock-sertifikat-2.jpg"] },
-  { name: "Uji Kompetensi Keahlian TKJ", issuer: "SMKN 1 Purwakarta", year: "2023", icon: "📜", category: "Akademik", images: ["/sertifikat/sertifikat-pkl.jpg"] },
+  { name: "Praktik Kerja Lapangan", issuer: "PT. Tera Data Indonusa", year: "2021", icon: "📜", category: "Magang", images: ["/sertifikat/sertifikat-pkl.jpg"] },
   { name: "Praktik Kerja Lapangan Divisi Polyester", issuer: "PT. Indorama Synthetics", year: "2024", icon: "🏢", category: "Magang", images: ["/sertifikat/sertifikatmagangindorama.jpg"] },
   { name: "Magang Bea Cukai Purwakarta", issuer: "Kantor Bea dan Cukai Purwakarta", year: "2025", icon: "🏛️", category: "Magang", images: ["/sertifikat/sertifikatmagangbeacukai.png"] },
 ];
